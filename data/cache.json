@@ -1,0 +1,55 @@
+{
+  "agatha christie|assassinio sull’orient express": {
+    "from_lib": {
+      "titolo": "Assassinio sull’Orient Express",
+      "autore": "Agatha Christie",
+      "isbn": null,
+      "temi": [
+        "giustizia",
+        "verità",
+        "morale",
+        "vendetta",
+        "ordine"
+      ]
+    },
+    "ol": {
+      "cover_url": null,
+      "pages": null,
+      "publish_year": 1991,
+      "subjects": [],
+      "isbns": [],
+      "olid": null
+    },
+    "wp": {
+      "lang": "it",
+      "title": "Assassinio sul Nilo (film 1978)",
+      "url": "https://it.wikipedia.org/wiki/Assassinio_sul_Nilo_(film_1978)",
+      "summary": "Assassinio sul Nilo è un film del 1978 diretto da John Guillermin, tratto dal romanzo Poirot sul Nilo di Agatha Christie. La colonna sonora è di Nino Rota."
+    },
+    "wd": null,
+    "fused": {
+      "titolo": "Assassinio sull’Orient Express",
+      "autore": "Agatha Christie",
+      "copertina_url": null,
+      "anno_pubblicazione": 1991,
+      "pagine": null,
+      "temi": [
+        "Altro / Generale"
+      ],
+      "premi_rilevanza": [],
+      "trama_breve": "Assassinio sul Nilo è un film del 1978 diretto da John Guillermin, tratto dal romanzo Poirot sul Nilo di Agatha Christie. La colonna sonora è di Nino Rota.",
+      "complessita": 3,
+      "tempo_lettura_ore": null,
+      "fonti": {
+        "ol": "OpenLibrary",
+        "wp": "https://it.wikipedia.org/wiki/Assassinio_sul_Nilo_(film_1978)",
+        "wd": ""
+      },
+      "confidence": {
+        "anno_pubblicazione": 0.6,
+        "pagine": 0.0,
+        "temi": 0.7
+      }
+    }
+  }
+}
