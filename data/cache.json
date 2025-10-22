@@ -51,5 +51,216 @@
         "temi": 0.7
       }
     }
+  },
+  "philip k. dick|la trilogia di valis": {
+    "from_lib": {
+      "titolo": "La trilogia di VALIS",
+      "autore": "Philip K. Dick",
+      "isbn": null,
+      "temi": [
+        "realtà",
+        "fede",
+        "identità",
+        "coscienza",
+        "divinità",
+        "percezione",
+        "alienazione"
+      ]
+    },
+    "ol": {
+      "cover_url": null,
+      "pages": null,
+      "publish_year": 2014,
+      "subjects": [],
+      "isbns": [],
+      "olid": null
+    },
+    "wp": {
+      "lang": "it",
+      "title": "Philip K. Dick",
+      "url": "https://it.wikipedia.org/wiki/Philip_K._Dick",
+      "summary": "Philip K. Dick, all'anagrafe Philip Kindred Dick, è stato uno scrittore statunitense."
+    },
+    "wd": {
+      "first_publication_year": null,
+      "awards": [
+        {
+          "name": "Golden Graoully for Best Foreign Novel",
+          "year": null
+        },
+        {
+          "name": "Golden Graoully for Best Foreign Novel",
+          "year": null
+        },
+        {
+          "name": "Readercon Small Press Awards",
+          "year": null
+        },
+        {
+          "name": "Readercon Small Press Awards",
+          "year": null
+        },
+        {
+          "name": "Science Fiction and Fantasy Hall of Fame",
+          "year": null
+        },
+        {
+          "name": "Science Fiction and Fantasy Hall of Fame",
+          "year": null
+        },
+        {
+          "name": "Premio Kurd Lasswitz per la migliore opera straniera",
+          "year": null
+        },
+        {
+          "name": "Premio Kurd Lasswitz per la migliore opera straniera",
+          "year": null
+        },
+        {
+          "name": "BSFA Award for Best Novel",
+          "year": null
+        },
+        {
+          "name": "BSFA Award for Best Novel",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per la miglior rappresentazione drammatica",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per la miglior rappresentazione drammatica",
+          "year": null
+        },
+        {
+          "name": "Premio John Wood Campbell Memorial",
+          "year": null
+        },
+        {
+          "name": "Premio John Wood Campbell Memorial",
+          "year": null
+        },
+        {
+          "name": "Tähtivaeltaja Award",
+          "year": null
+        },
+        {
+          "name": "Tähtivaeltaja Award",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per il miglior romanzo",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per il miglior romanzo",
+          "year": null
+        }
+      ],
+      "genre": [
+        "fantastico",
+        "fantascienza"
+      ],
+      "setting_time": null,
+      "setting_place": null,
+      "qid": "Q171091"
+    },
+    "fused": {
+      "titolo": "La trilogia di VALIS",
+      "autore": "Philip K. Dick",
+      "copertina_url": null,
+      "anno_pubblicazione": 2014,
+      "pagine": null,
+      "temi": [
+        "Altro / Generale"
+      ],
+      "premi_rilevanza": [
+        {
+          "name": "Golden Graoully for Best Foreign Novel",
+          "year": null
+        },
+        {
+          "name": "Golden Graoully for Best Foreign Novel",
+          "year": null
+        },
+        {
+          "name": "Readercon Small Press Awards",
+          "year": null
+        },
+        {
+          "name": "Readercon Small Press Awards",
+          "year": null
+        },
+        {
+          "name": "Science Fiction and Fantasy Hall of Fame",
+          "year": null
+        },
+        {
+          "name": "Science Fiction and Fantasy Hall of Fame",
+          "year": null
+        },
+        {
+          "name": "Premio Kurd Lasswitz per la migliore opera straniera",
+          "year": null
+        },
+        {
+          "name": "Premio Kurd Lasswitz per la migliore opera straniera",
+          "year": null
+        },
+        {
+          "name": "BSFA Award for Best Novel",
+          "year": null
+        },
+        {
+          "name": "BSFA Award for Best Novel",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per la miglior rappresentazione drammatica",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per la miglior rappresentazione drammatica",
+          "year": null
+        },
+        {
+          "name": "Premio John Wood Campbell Memorial",
+          "year": null
+        },
+        {
+          "name": "Premio John Wood Campbell Memorial",
+          "year": null
+        },
+        {
+          "name": "Tähtivaeltaja Award",
+          "year": null
+        },
+        {
+          "name": "Tähtivaeltaja Award",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per il miglior romanzo",
+          "year": null
+        },
+        {
+          "name": "Premio Hugo per il miglior romanzo",
+          "year": null
+        }
+      ],
+      "trama_breve": "Philip K. Dick, all'anagrafe Philip Kindred Dick, è stato uno scrittore statunitense.",
+      "complessita": 3,
+      "tempo_lettura_ore": null,
+      "fonti": {
+        "ol": "OpenLibrary",
+        "wp": "https://it.wikipedia.org/wiki/Philip_K._Dick",
+        "wd": "https://www.wikidata.org/wiki/Q171091"
+      },
+      "confidence": {
+        "anno_pubblicazione": 0.6,
+        "pagine": 0.0,
+        "temi": 0.7
+      }
+    }
   }
 }

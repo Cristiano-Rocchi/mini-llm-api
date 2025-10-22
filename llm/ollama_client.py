@@ -41,7 +41,6 @@ class LLMClient:
             "non inventi nulla. Scrivi italiano naturale, tono semplice e concreto."
         )
 
-        # Prompt molto diretto per ridurre libertà e allucinazioni
         user = (
             "GENERA SOLO JSON (niente testo prima o dopo). Campi obbligatori:\n"
             '  - "trama_breve": stringa (max 2 frasi)\n'
@@ -54,24 +53,40 @@ class LLMClient:
         txt = self._chat_single(system=system, user=user)
         if not txt:
             return None
-
         return self._parse_json_safe(txt)
 
-    # (opzionale) esempio di classificatore d'intento, lo lascio pronto
     def classify_intent(self, text: str) -> Optional[str]:
-        """Restituisce una etichetta semplice (es. 'saluto', 'consiglio_libro', 'altro')."""
+        """
+        Classifica in UNA label:
+        - saluto
+        - chiacchiera
+        - consiglio_libro
+        - info_libro
+        - inventario        # 'quali/quanti libri', liste per genere, ecc.
+        - altro
+        Rispondi SOLO con una parola tra queste.
+        """
         system = (
-            "Sei un classificatore. Leggi il testo e scegli UNA sola label tra: "
-            "saluto, consiglio_libro, info_libro, altro. Rispondi SOLO con la label."
+            "Sei un classificatore di intenti. Leggi il testo e rispondi SOLO con una label tra: "
+            "saluto, chiacchiera, consiglio_libro, info_libro, inventario, altro."
         )
         user = f"Testo: {text.strip()}"
         txt = self._chat_single(system=system, user=user)
         if not txt:
             return None
-        label = txt.strip().lower()
-        # pulizia minima
-        label = re.sub(r"[^a-z_]", "", label)
-        return label or None
+        label = re.sub(r'[^a-z_]', '', txt.strip().lower())
+        allowed = {'saluto', 'chiacchiera', 'consiglio_libro', 'info_libro', 'inventario', 'altro'}
+        return label if label in allowed else 'altro'
+
+    def small_talk(self, text: str) -> str:
+        """Risposta breve e cordiale (1–2 frasi) senza proporre libri."""
+        system = (
+            "Sei un assistente cordiale. Rispondi in ITALIANO, in 1-2 frasi, "
+            "breve e chiaro. NON proporre libri a meno che l'utente lo chieda esplicitamente."
+        )
+        user = f"L'utente dice: {text.strip()}"
+        txt = self._chat_single(system=system, user=user) or ""
+        return txt.strip()
 
     # ---------- Ollama low-level ----------
 
@@ -80,7 +95,6 @@ class LLMClient:
         Tengo stream=False per ricevere la risposta tutta insieme.
         """
         url = f"{self.host}/api/generate"
-        # creo un prompt "compatto": prima le istruzioni di sistema, poi l'utente
         prompt = f"<<SYS>>\n{system}\n<</SYS>>\n\n{user}"
 
         body = {
@@ -95,7 +109,6 @@ class LLMClient:
             if r.status_code != 200:
                 return None
             js = r.json()
-            # campo standard di Ollama per /generate
             return js.get("response")
         except Exception:
             return None
@@ -106,13 +119,11 @@ class LLMClient:
         """Provo a parse-are il JSON. Se la risposta ha testo extra,
         cerco la prima/dopo ultima graffa per estrarre il blocco JSON.
         """
-        # tentativo diretto
         try:
             return json.loads(text)
         except Exception:
             pass
 
-        # estrazione euristica tra { ... }
         match = re.search(r"\{.*\}", text, flags=re.DOTALL)
         if match:
             snippet = match.group(0)
